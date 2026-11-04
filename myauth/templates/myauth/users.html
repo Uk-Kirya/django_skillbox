@@ -1,0 +1,52 @@
+{% extends 'myauth/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Пользователи — RuStore
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Пользователи</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-12">
+                <h1 class="mb-4">Пользователи</h1>
+                <div class="users__grid">
+                    {% for user in users %}
+                        <div>
+                            {% if user.profile.photo %}
+                                <div class="ratio ratio-1x1">
+                                    <div>
+                                        <picture>
+                                            <img src="{{ user.profile.photo.url }}" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="ratio ratio-1x1">
+                                    <div>
+                                        <picture>
+                                            <img src="{% static 'img/ava.svg' %}" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <div>
+                                <strong>{% firstof user.first_name user.username %}</strong>
+                            </div>
+                            <a href="{% url 'myauth:user' user.pk %}" class="btn btn-outline-primary">Профиль</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

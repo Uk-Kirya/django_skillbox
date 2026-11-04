@@ -1,0 +1,34 @@
+.users__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.users__grid > div {
+    width: calc(20% - 1.2rem);
+    background: #f9f9f9;
+    border-radius: .75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.users__grid .ratio picture {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.users__grid .ratio picture img {
+    object-fit: cover !important;
+    width: 100%;
+    height: 100%;
+}

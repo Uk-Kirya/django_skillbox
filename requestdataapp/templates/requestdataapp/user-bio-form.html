@@ -1,0 +1,49 @@
+{% extends 'requestdataapp/base.html' %}
+
+{% block title %}
+    ShopApp — User BIO
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">User BIO</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-12">
+                <h1 class="mb-4">User BIO</h1>
+            </div>
+            <div class="col-12">
+              <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+              </form>
+            </div>
+          {% if request.POST %}
+          <div class="col-12 mt-5">
+            <h2>Previos data</h2>
+            <table>
+              <tr>
+                <td>Full name:</td>
+                <td>{{ request.POST.name }}</td>
+              </tr>
+              <tr>
+                <td>Age:</td>
+                <td>{{ request.POST.age }}</td>
+              </tr>
+              <tr>
+                <td>Bio:</td>
+                <td><p>{{ request.POST.bio|linebreaks }}</p></td>
+              </tr>
+            </table>
+          </div>
+          {% endif %}
+        </div>
+    </div>
+{% endblock %}

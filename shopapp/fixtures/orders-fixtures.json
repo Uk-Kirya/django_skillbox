@@ -1,0 +1,29 @@
+[
+  {
+    "model": "shopapp.order",
+    "pk": 5,
+    "fields": {
+      "delivery_address": "Магнитогорская 23/47",
+      "promocode": "sale777",
+      "created_at": "2024-12-03T11:01:19.394Z",
+      "user": 1,
+      "products": [
+        6,
+        5
+      ]
+    }
+  },
+  {
+    "model": "shopapp.order",
+    "pk": 6,
+    "fields": {
+      "delivery_address": "Айманова 68/117",
+      "promocode": "",
+      "created_at": "2024-12-03T11:01:52.684Z",
+      "user": 8,
+      "products": [
+        4
+      ]
+    }
+  }
+]

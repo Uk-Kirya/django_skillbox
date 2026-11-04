@@ -1,0 +1,88 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+    ShopApp — Products
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row">
+
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'shopapp:index' %}">Магазин</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Товары</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-12">
+                <h1>Товары</h1>
+            </div>
+
+            {% if products %}
+                {% for product in products %}
+                    <div class="col-6 col-md-4 col-lg-3 mt-4">
+                        <div class="card h-100">
+                            <div class="ratio ratio-16x9">
+                                <div>
+                                    <img src="" class="card-img-top" alt="">
+                                </div>
+                            </div>
+                            {% if product.discount %}
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    -{{ product.discount }}%
+                                </span>
+                            {% endif %}
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.description_short }}</p>
+                                {% if product.availability %}
+                                    <span class="badge rounded-pill bg-success mb-2">In stock</span>
+                                {% else %}
+                                    <span class="badge rounded-pill bg-secondary mb-2">out of stock</span>
+                                {% endif %}
+                                <p class="card-text fw-lighter fs-4">{{ product.price }} ₽</p>
+                                <div class="d-flex flex-column flex-md-row w-100 mt-auto">
+                                    <a href="{% url 'shopapp:product_details' pk=product.pk %}" class="btn btn-outline-primary w-100 me-2">
+                                        <i class="bi bi-eye"></i>
+                                        More
+                                    </a>
+                                    {% if product.availability %}
+                                        <a href="#" class="btn btn-primary w-100">
+                                            <i class="bi bi-bag"></i>
+                                            Bye
+                                        </a>
+                                    {% else %}
+                                        <a href="#" class="btn btn-secondary w-100">
+                                            pre-order
+                                        </a>
+                                    {% endif %}
+                                </div>
+                                <div>
+                                    <span class="badge rounded-pill bg-secondary mt-3">by {{ product.created_by }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Товаров пока нет ...</p>
+            {% endif %}
+
+            {% if perms.shopapp.add_product %}
+                <div class="col-12 text-center mt-5 bg-light p-3 rounded-3">
+                    <a href="{% url 'shopapp:products_create' %}" class="btn btn-lg btn-primary">
+                        Создать товар <i class="bi bi-plus-circle-fill"></i>
+                    </a>
+                </div>
+            {% else %}
+                <div class="col-12 text-center mt-5 bg-light p-3 rounded-3">
+                    Вы не можете создать новый товар
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

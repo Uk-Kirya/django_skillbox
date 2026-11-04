@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    container_name: app_django
+    ports:
+      - "8001:8000"
+
+  grafana:
+    image: grafana/grafana:latest
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    ports:
+      - "3000:3000"
+    logging:
+      driver: loki
+      options:
+        loki-url: http://host.docker.internal:3100/loki/api/v1/push
+
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"

@@ -1,0 +1,98 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "iPhone 16 PRO",
+      "description": "Here are many variations of passages of Lorem Ipsum available",
+      "image": "image",
+      "price": "170500.00",
+      "discount": 12,
+      "created_at": "2024-12-03T10:36:19.053Z",
+      "availability": true,
+      "archived": false,
+      "created_by": 1,
+      "test": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "iPad 2024 Pro",
+      "description": "Contrary to popular belief, Lorem Ipsum is not simply random text",
+      "image": "image",
+      "price": "80000.00",
+      "discount": 9,
+      "created_at": "2024-12-03T10:36:49.226Z",
+      "availability": true,
+      "archived": false,
+      "created_by": 1,
+      "test": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "name": "MacBook Pro 16",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "image": "image",
+      "price": "200305.00",
+      "discount": 0,
+      "created_at": "2024-12-03T10:37:20.238Z",
+      "availability": true,
+      "archived": false,
+      "created_by": 1,
+      "test": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 7,
+    "fields": {
+      "name": "SmartPhone 1",
+      "description": "",
+      "image": "",
+      "price": "199.00",
+      "discount": 10,
+      "created_at": "2026-10-22T19:16:52.249Z",
+      "availability": true,
+      "archived": false,
+      "created_by": 2,
+      "test": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "SmartPhone 2",
+      "description": "",
+      "image": "",
+      "price": "299.00",
+      "discount": 10,
+      "created_at": "2026-10-22T19:16:52.249Z",
+      "availability": true,
+      "archived": false,
+      "created_by": 2,
+      "test": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "name": "SmartPhone 3",
+      "description": "",
+      "image": "",
+      "price": "399.00",
+      "discount": 10,
+      "created_at": "2026-10-22T19:16:52.249Z",
+      "availability": true,
+      "archived": false,
+      "created_by": 2,
+      "test": ""
+    }
+  }
+]

@@ -1,0 +1,62 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}
+    Блог — RuStore
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Блог</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-12">
+                <h1>Блог</h1>
+            </div>
+            {% for article in articles %}
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="card">
+                        <div class="ratio ratio-16x9">
+                            <a href="{% url 'blogapp:article' pk=article.pk %}">
+                                <div class="bg-light rounded-3 d-flex align-items-center justify-content-center h-100">
+                                    Картинка
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <a href="{% url 'blogapp:article' pk=article.pk %}">
+                                <h5 class="card-title">
+                                    {{ article }}
+                                </h5>
+                            </a>
+                        </div>
+                        <ul class="list-group list-group-flush" style="font-size: .75rem;">
+                            <li class="list-group-item">Автор: <strong>{{ article.author }}</strong></li>
+                            <li class="list-group-item">Категория: <strong>{{ article.category }}</strong></li>
+                            <li class="list-group-item">Дата публикации: <strong>{{ article.pub_date }}</strong></li>
+                            <li class="list-group-item">
+                                Теги:
+                                {% for tag in article.tags.all %}
+                                    #{{ tag }}
+                                {% empty %}
+                                    —
+                                {% endfor %}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="col-12 text-center mt-4">
+                    <p>Статей пока нет ...</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+    Архивирование — {{ object.name }}
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'shopapp:index' %}">Магазин</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'shopapp:products_list' %}">Товары</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'shopapp:product_details' pk=object.pk %}">{{ object }}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Заархивировать товар</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-12">
+                <h1 class="mb-4">Архивирование {{ object.name }}</h1>
+            </div>
+            <div class="col-12">
+                <p>Вы уверены, что хотите заархивировать товар?</p>
+            </div>
+            <div class="col-12 text-center mt-5 bg-light p-3 rounded-3 d-flex justify-content-center">
+                <a href="{% url 'shopapp:product_details' pk=object.pk %}" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i> Отмена</a>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button class="btn btn-danger ms-1" type="submit"><i class="bi bi-trash3"></i> Архивировать</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+    Магазин — RuStore
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Главная</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Магазин</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-12 text-center">
+                <h1 class="mb-3">Магазин RuStore</h1>
+                <p>Добро пожаловать в наш магазин!</p>
+                <div class="btn-group w-100" role="group" aria-label="Basic outlined example">
+                    <button type="button" onclick="window.location.href = '{% url 'shopapp:products_list' %}';" class="btn btn-outline-primary">Товары</button>
+                    <button type="button" onclick="window.location.href = '{% url 'shopapp:orders_list' %}';" class="btn btn-outline-primary">Заказы</button>
+                    <button type="button" onclick="window.location.href = '{% url 'shopapp:groups_list' %}';" class="btn btn-outline-primary">Группы</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
