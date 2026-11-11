@@ -1996,3 +1996,284 @@ UnboundLocalError: cannot access local variable 'serializer' where it is not ass
 [INFO] 2026-11-11 11:46:56,516 django.utils.autoreload: Watching for file changes with StatReloader
 [INFO] 2026-11-11 11:54:24,245 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
 [INFO] 2026-11-11 11:54:24,718 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 13:41:22,350 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-11 13:41:41,317 django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 249, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 359, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 222, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/template/base.py", line 172, in render
+    with context.bind_template(self):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/panels/templates/panel.py", line 51, in _request_context_bind_template
+    context = processor(self.request)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/mysite/mysite/contextprocessor.py", line 10, in context_all
+    "orders": Order.objects.filter(user=request.user) if request.user.is_authenticated else [],
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/middleware.py", line 39, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/middleware.py", line 19, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/__init__.py", line 287, in get_user
+    user_id = _get_user_session_key(request)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/__init__.py", line 111, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+                                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 55, in __getitem__
+    return self._session[key]
+           ^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 254, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 718, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 455, in __len__
+    self._fetch_all()
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 281, in execute
+    return self._record(super().execute, sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/panels/sql/tracking.py", line 201, in _record
+    return method(sql, params)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 359, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+[ERROR] 2026-11-11 13:41:41,374 django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 249, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 359, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/middleware.py", line 160, in __call__
+    return self._postprocess(request, response, toolbar)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/middleware.py", line 199, in _postprocess
+    panel.generate_stats(request, response)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/panels/request.py", line 63, in generate_stats
+    session_data = dict(request.session)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 165, in keys
+    return self._session.keys()
+           ^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 254, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 718, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 455, in __len__
+    self._fetch_all()
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 359, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+[ERROR] 2026-11-11 13:41:41,471 django.request: Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 249, in _get_session
+    return self._session_cache
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 359, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/middleware.py", line 160, in __call__
+    return self._postprocess(request, response, toolbar)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/middleware.py", line 199, in _postprocess
+    panel.generate_stats(request, response)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/debug_toolbar/panels/request.py", line 63, in generate_stats
+    session_data = dict(request.session)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 165, in keys
+    return self._session.keys()
+           ^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/base.py", line 254, in _get_session
+    self._session_cache = self.load()
+                          ^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 55, in load
+    s = self._get_session_from_db()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/sessions/backends/db.py", line 34, in _get_session_from_db
+    return self.model.objects.get(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 718, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 455, in __len__
+    self._fetch_all()
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 2287, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 131, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1643, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 359, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: django_session
+[WARNING] 2026-11-11 13:42:19,737 django.request: Not Found: /favicon.ico
+[INFO] 2026-11-11 13:43:39,407 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
