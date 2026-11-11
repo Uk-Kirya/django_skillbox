@@ -37,6 +37,10 @@ ALLOWED_HOSTS = [
 ] + getenv('ALLOWED_HOSTS', '').split(',')
 INTERNAL_IPS = ['127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://skillbox.losdesign.ru',
+]
+
 if DEBUG:
     import socket
 
