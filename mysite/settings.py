@@ -172,6 +172,7 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
+MEDIA_ROOT.mkdir(exist_ok=True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -201,6 +202,7 @@ SPECTACULAR_SETTINGS = {
 }
 
 LOGFILE_NAME = BASE_DIR / 'logs' / 'mysite.log'
+LOGFILE_NAME.mkdir(exist_ok=True)
 LOGFILE_SIZE = 1 * 1024 * 1024
 LOGFILE_COUNT = 3
 
