@@ -1,0 +1,77 @@
+{% extends 'shopapp/base.html' %}
+
+{% load cache %}
+
+{% block title %}
+    Заказы пользователя {{ owner }} — RuStore
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'home:home' %}">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'shopapp:index' %}">Магазин</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Заказы пользователя {{ owner }}</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-12">
+                <h1 class="mb-4">Заказы пользователя {{ owner }}</h1>
+            </div>
+
+            <div class="col-12">
+                {% if order_list %}
+                    <h5 class="mb-4">Пользователь {{ owner }} выполнил следующие заказы</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover" style="min-width: 1000px;">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col">Создан</th>
+                                    <th scope="col">Покупатель</th>
+                                    <th scope="col">Промокод</th>
+                                    <th scope="col">Адрес</th>
+                                    <th scope="col">Товары</th>
+                                    <th scope="col">Детали заказа</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% cache 10 owner.pk %}
+                                    {% for order in order_list %}
+                                        <tr>
+                                            <td>{{ order.created_at }}</td>
+                                            <td>{% firstof order.user.first_name order.user.username %}</td>
+                                            <td>{{ order.promocode }}</td>
+                                            <td>{{ order.delivery_address }}</td>
+                                            <td>
+                                                <ul>
+                                                    {% for product in order.products.all %}
+                                                        <li>{{ product }} for ${{ product.price }}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <a href="{% url 'shopapp:order_details' pk=order.pk %}">Подробнее</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endcache %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                    <p>У пользователя {{ owner }} еще нет заказов</p>
+                {% endif %}
+            </div>
+
+            <div class="col-12 text-center mt-5 bg-light p-3 rounded-3">
+                <a href="{% url 'shopapp:create_order' %}" class="btn btn-lg btn-primary">
+                    Создать новый заказ <i class="bi bi-plus-circle-fill"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

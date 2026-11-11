@@ -1,10 +1,11 @@
 import logging
 from csv import DictWriter
 
-from django.contrib.auth.models import Group
+from django.core.cache import cache
+from django.contrib.auth.models import Group, User
 from django.contrib.syndication.views import Feed
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -260,3 +261,34 @@ class LatestProductsFeed(Feed):
 
     def items(self):
         return Product.objects.filter(archived=False).order_by('-created_at').all()[:3]
+
+
+class UserOrdersListView(LoginRequiredMixin, ListView):
+    model = Order
+    template_name = 'shopapp/user_orders_list.html'
+    context_object_name = 'order_list'
+
+    def get_queryset(self):
+        self.owner = get_object_or_404(User, pk=self.kwargs.get('user_id'))
+        return Order.objects.filter(user=self.owner).prefetch_related("products")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['owner'] = self.owner
+        return context
+
+
+class UserOrdersExportView(LoginRequiredMixin, View):
+
+    def get(self, request, user_id):
+        owner = get_object_or_404(User, pk=user_id)
+        cache_key = f"owner_{owner.pk}"
+
+        orders = cache.get(cache_key)
+        if orders is None:
+            orders = Order.objects.filter(user=owner).prefetch_related("products").order_by('pk')
+        else:
+            cache.set(cache_key, orders, 300)
+
+        serializer = OrderSerializer(orders, many=True)
+        return JsonResponse(serializer.data, safe=False)

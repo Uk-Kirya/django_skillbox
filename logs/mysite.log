@@ -1359,3 +1359,640 @@ ValueError: Field 'id' expected a number but got '['.
 [INFO] 2026-11-03 15:46:19,266 django.utils.autoreload: Watching for file changes with StatReloader
 [INFO] 2026-11-03 15:46:54,705 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
 [INFO] 2026-11-03 15:46:55,108 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-04 18:51:31,339 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-11-04 18:51:33,588 django.request: Not Found: /favicon.ico
+[WARNING] 2026-11-04 18:51:35,211 django.request: Not Found: /favicon.ico
+[WARNING] 2026-11-04 18:54:59,441 django.request: Not Found: /favicon.ico
+[INFO] 2026-11-04 18:55:21,193 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+[INFO] 2026-11-04 18:55:21,646 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-04 18:55:33,303 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+[INFO] 2026-11-04 18:55:33,740 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-11-05 06:49:03,196 django.request: Not Found: /favicon.ico
+[INFO] 2026-11-10 18:17:06,860 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-11-10 18:17:09,940 django.request: Not Found: /favicon.ico
+[WARNING] 2026-11-10 18:17:11,022 django.request: Not Found: /favicon.ico
+[INFO] 2026-11-10 18:36:45,720 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+[INFO] 2026-11-10 18:36:46,082 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 18:36:51,311 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+[INFO] 2026-11-10 18:36:51,603 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 18:37:08,098 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+[INFO] 2026-11-10 18:37:08,406 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 18:37:56,957 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+[INFO] 2026-11-10 18:37:57,360 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:38:09,994 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserOrdersListView.get() got an unexpected keyword argument 'user_id'
+[INFO] 2026-11-10 18:39:09,220 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:39:09,624 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:39:09,985 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 108, in dispatch
+    if not self.has_permission():
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 104, in has_permission
+    perms = self.get_permission_required()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 88, in get_permission_required
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: UserOrdersListView is missing the permission_required attribute. Define UserOrdersListView.permission_required, or override UserOrdersListView.get_permission_required().
+[WARNING] 2026-11-10 18:40:11,095 django.request: Not Found: /shop/users
+[ERROR] 2026-11-10 18:40:52,014 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 108, in dispatch
+    if not self.has_permission():
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 104, in has_permission
+    perms = self.get_permission_required()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 88, in get_permission_required
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: UserOrdersListView is missing the permission_required attribute. Define UserOrdersListView.permission_required, or override UserOrdersListView.get_permission_required().
+[INFO] 2026-11-10 18:43:21,178 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:43:21,540 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:43:30,256 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 108, in dispatch
+    if not self.has_permission():
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 104, in has_permission
+    perms = self.get_permission_required()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 88, in get_permission_required
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: UserOrdersListView is missing the permission_required attribute. Define UserOrdersListView.permission_required, or override UserOrdersListView.get_permission_required().
+[INFO] 2026-11-10 18:43:41,397 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:43:41,807 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:43:42,115 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserOrdersListView.get() got an unexpected keyword argument 'user_id'
+[ERROR] 2026-11-10 18:44:27,327 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserOrdersListView.get() got an unexpected keyword argument 'user_id'
+[INFO] 2026-11-10 18:44:59,581 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:44:59,995 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:48:53,141 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 206, in _get_response
+    self.check_response(response, callback)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 334, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+[INFO] 2026-11-10 18:49:22,276 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:49:22,765 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 18:49:29,244 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:49:29,691 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:49:30,617 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 206, in _get_response
+    self.check_response(response, callback)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 334, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+[ERROR] 2026-11-10 18:49:46,277 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 206, in _get_response
+    self.check_response(response, callback)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 334, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+[INFO] 2026-11-10 18:49:46,415 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:49:46,785 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:49:48,869 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 206, in _get_response
+    self.check_response(response, callback)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 334, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+[INFO] 2026-11-10 18:49:49,056 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:49:49,332 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 18:49:50,513 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:49:50,791 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:49:52,440 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 206, in _get_response
+    self.check_response(response, callback)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 334, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+[INFO] 2026-11-10 18:50:42,960 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:50:43,277 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 18:51:48,480 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:51:48,784 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:51:50,883 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 206, in _get_response
+    self.check_response(response, callback)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 334, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+[ERROR] 2026-11-10 18:51:53,006 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 206, in _get_response
+    self.check_response(response, callback)
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 334, in check_response
+    raise ValueError(
+ValueError: The view shopapp.views.view didn't return an HttpResponse object. It returned None instead.
+[INFO] 2026-11-10 18:52:22,064 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:52:22,370 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 18:54:19,046 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:54:19,376 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:54:31,059 django.request: Internal Server Error: /shop/users/33/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py", line 267, in get
+    user = User.objects.get(pk=kwargs['user_id'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 722, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[ERROR] 2026-11-10 18:54:54,595 django.request: Internal Server Error: /shop/users/33/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py", line 267, in get
+    user = User.objects.get(pk=kwargs['user_id'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 722, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[INFO] 2026-11-10 18:54:54,720 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:54:55,092 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 18:54:59,385 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 18:54:59,708 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 18:55:00,639 django.request: Internal Server Error: /shop/users/33/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py", line 267, in get
+    user = User.objects.get(pk=kwargs['user_id'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 722, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[INFO] 2026-11-10 19:07:42,006 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 19:07:42,404 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 19:08:45,830 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 19:08:46,261 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 19:08:48,662 django.request: Internal Server Error: /shop/users/33/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/list.py", line 36, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: UserOrdersListView is missing a QuerySet. Define UserOrdersListView.model, UserOrdersListView.queryset, or override UserOrdersListView.get_queryset().
+[ERROR] 2026-11-10 19:08:51,116 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/list.py", line 36, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: UserOrdersListView is missing a QuerySet. Define UserOrdersListView.model, UserOrdersListView.queryset, or override UserOrdersListView.get_queryset().
+[ERROR] 2026-11-10 19:08:52,670 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/list.py", line 36, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: UserOrdersListView is missing a QuerySet. Define UserOrdersListView.model, UserOrdersListView.queryset, or override UserOrdersListView.get_queryset().
+[INFO] 2026-11-10 19:09:16,449 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 19:09:16,865 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-10 19:09:17,778 django.request: Internal Server Error: /shop/users/1/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/list.py", line 158, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/list.py", line 36, in get_queryset
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: UserOrdersListView is missing a QuerySet. Define UserOrdersListView.model, UserOrdersListView.queryset, or override UserOrdersListView.get_queryset().
+[INFO] 2026-11-10 19:11:03,894 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 19:11:04,287 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-10 19:13:20,475 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-10 19:13:20,839 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:21:07,245 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:21:07,693 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:26:35,358 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:26:35,781 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:27:09,102 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:27:09,434 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-11-11 10:27:48,521 django.request: Not Found: /favicon.ico
+[INFO] 2026-11-11 10:31:36,748 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:31:37,134 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:32:49,807 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:32:50,160 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:32:57,549 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:32:57,830 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:33:37,491 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:33:37,799 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:38:09,721 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:38:10,054 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-11-11 10:38:26,029 django.request: Method Not Allowed (GET): /shop/users/2/orders/
+[INFO] 2026-11-11 10:38:39,217 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:38:39,540 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:38:43,812 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:38:44,129 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:39:13,251 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:39:13,536 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-11 10:39:16,924 django.request: Internal Server Error: /shop/users/2/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: UserOrdersListView.get() got an unexpected keyword argument 'user_id'
+[INFO] 2026-11-11 10:40:10,764 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:40:11,068 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:40:55,660 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:40:56,001 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:42:52,393 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:42:52,757 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-11 10:43:02,820 django.request: Internal Server Error: /shop/users/333/orders/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py", line 276, in get
+    user = User.objects.get(pk=user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/db/models/query.py", line 722, in get
+    raise self.model.DoesNotExist(
+django.contrib.auth.models.User.DoesNotExist: User matching query does not exist.
+[INFO] 2026-11-11 10:46:59,899 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:47:00,301 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:47:19,013 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:47:19,309 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:47:35,967 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:47:36,244 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:47:48,773 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:47:49,061 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:47:52,303 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:47:52,608 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:47:56,935 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:47:57,228 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:48:16,887 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:48:17,175 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:48:26,623 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:48:26,934 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:49:02,376 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:49:02,700 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:49:26,732 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:49:27,034 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:49:45,698 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:49:45,993 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:49:49,223 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:49:49,517 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:50:00,958 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:50:01,255 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:50:30,169 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:50:30,463 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:50:39,896 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:50:40,183 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 10:55:19,489 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 10:55:19,786 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-11-11 10:55:42,648 django.request: Not Found: /shop/users/33/orders/
+[WARNING] 2026-11-11 10:55:49,480 django.request: Not Found: /shop/users/dsds/orders/
+[WARNING] 2026-11-11 11:00:28,427 django.request: Not Found: /favicon.ico
+[WARNING] 2026-11-11 11:03:35,708 django.request: Not Found: /favicon.ico
+[WARNING] 2026-11-11 11:03:51,333 django.request: Not Found: /favicon.ico
+[WARNING] 2026-11-11 11:03:55,839 django.request: Not Found: /favicon.ico
+[INFO] 2026-11-11 11:09:57,195 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:09:58,022 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:10:16,679 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:10:16,976 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:11:28,503 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:11:28,828 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:11:37,157 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:11:37,477 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:13:06,936 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/serializers.py changed, reloading.
+[INFO] 2026-11-11 11:13:07,231 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-11-11 11:19:27,952 django.request: Not Found: /api
+[INFO] 2026-11-11 11:24:13,413 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:24:13,870 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:24:45,028 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:24:45,313 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:26:17,815 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:26:18,122 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:26:36,877 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+[INFO] 2026-11-11 11:26:37,175 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:26:55,853 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/urls.py changed, reloading.
+[INFO] 2026-11-11 11:26:56,150 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:29:59,379 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:29:59,695 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:32:47,007 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:32:47,390 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:32:57,926 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:32:58,218 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:33:16,952 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:33:17,257 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:33:20,481 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:33:20,794 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:33:42,700 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:33:43,005 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:34:16,342 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:34:16,797 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:34:23,213 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:34:23,515 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-11 11:34:23,834 django.request: Internal Server Error: /shop/users/2/orders/export/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py", line 286, in get
+    return JsonResponse(serializer.data, safe=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/http/response.py", line 765, in __init__
+    raise TypeError(
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+[INFO] 2026-11-11 11:34:36,109 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:34:36,434 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2026-11-11 11:36:11,645 django.request: Not Found: /favicon.ico
+[INFO] 2026-11-11 11:41:22,731 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:41:23,128 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:41:55,414 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:41:55,720 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:42:06,184 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:42:06,477 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:42:15,877 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:42:16,169 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:42:21,454 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:42:21,780 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:42:57,078 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:42:57,401 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:43:03,714 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:43:04,007 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:43:13,462 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:43:13,741 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:44:15,952 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:44:16,254 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:44:37,121 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:44:37,451 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2026-11-11 11:44:47,129 django.request: Internal Server Error: /shop/users/1/orders/export/
+Traceback (most recent call last):
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 199, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/contrib/auth/mixins.py", line 74, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/venv/lib/python3.12/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py", line 293, in get
+    return JsonResponse(serializer.data, safe=False)
+                        ^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'serializer' where it is not associated with a value
+[INFO] 2026-11-11 11:45:32,679 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:45:33,105 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:46:56,140 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:46:56,516 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2026-11-11 11:54:24,245 django.utils.autoreload: /Users/kirilllossev/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+[INFO] 2026-11-11 11:54:24,718 django.utils.autoreload: Watching for file changes with StatReloader
